@@ -1,30 +1,18 @@
 [
 {
-"display": "HTML Tutorial",
-"url": "https://www.w3schools.com/html/default.asp"
+"display": "Home Page",
+"url": "https://dkbrewer.github.io/CIT261/"
 },
 {
-"display": "CSS Tutorial",
-"url": "https://www.w3schools.com/css/default.asp"
+"display": "My Account",
+"url": "https://dkbrewer.github.io/CIT261/"
 },
 {
-"display": "JavaScript Tutorial",
-"url": "https://www.w3schools.com/js/default.asp"
+"display": "Create Account",
+"url": "https://dkbrewer.github.io/CIT261/"
 },
 {
-"display": "jQuery Tutorial",
-"url": "https://www.w3schools.com/jquery/default.asp"
-},
-{
-"display": "SQL Tutorial",
-"url": "https://www.w3schools.com/sql/default.asp"
-},
-{
-"display": "PHP Tutorial",
-"url": "https://www.w3schools.com/php/default.asp"
-},
-{
-"display": "XML Tutorial",
-"url": "https://www.w3schools.com/xml/default.asp"
+"display": "Youtube Channel",
+"url": "https://www.youtube.com/channel/UC4PooiX37Pld1T8J5SYT-SQ"
 }
 ]
