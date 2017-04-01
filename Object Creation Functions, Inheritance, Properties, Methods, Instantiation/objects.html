@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Objects</title>
+    <script>
+		//Inheritance
+		function person(name, age, faveColor) {
+			this.name = name;
+			this.age = age;
+			this.faveColor = faveColor;
+		}
+		
+		var person1 = new person("Daniel Brewer", 26, "Blue")
+		
+		//Properties and Instantiation
+		var car1 = {
+			make: "Chevrolet",
+			model: "Camaro",
+			year: "2017",
+			subModel: "SS",
+			color: "Blue",
+			Description: function(){
+				return this.color + " " + this.year + " " + this.make + " " + this.model + " " + this.subModel;
+			}
+		};
+		
+		//Methods
+		var hotel = new Object();
+		hotel.name = 'Marriot';
+		hotel.rooms = 200;
+		hotel.booked = 126;
+		hotel.checkAvailability = function(){
+			return this.rooms - this.booked;
+		};
+
+		var hName = hotel.name;
+		var rooms = hotel.checkAvailability();		
+	</script>
+</head>
+<body>
+    <h1>Objects</h1>
+	<h2>Inheritance</h2>
+	<script>
+		document.write(person1.name, " ", person1.age, " ", person1.faveColor);
+	</script>
+	<h2>Properties and Instantiation</h2>
+	<script>
+		document.write(car1.Description());
+	</script>
+	<h2>Method</h2>
+	<script>
+		document.write(hName + " has " + rooms + " open rooms.");
+	</script>
+</body>
+</html>

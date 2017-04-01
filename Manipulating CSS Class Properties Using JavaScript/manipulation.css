@@ -1,0 +1,12 @@
+body{
+    background-color: white;
+}
+div {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+button{
+    padding:3px;
+    margin-bottom: 5px;
+}

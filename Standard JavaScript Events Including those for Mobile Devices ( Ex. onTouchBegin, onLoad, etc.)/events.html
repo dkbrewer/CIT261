@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Events</title>
+	<style>
+		#box1 {
+			width: 150px;
+			height: 150px;
+			background: red;
+		}
+	</style>
+	<script>
+	function load() {
+    alert("You are being redirected. This is a test");
+	window.open ("http://www.byui.edu","mywindow");
+	
+	/*Opens in the same window
+	window.location = "http://www.byui.edu"*/
+	}
+	
+	function clickHere() {
+	window.open ("https://app.perusall.com/home","mywindow");
+	}
+	
+	function over(){
+			document.getElementById('p1').innerHTML = "Changed to red!";
+		}
+		
+		function out(){
+			document.getElementById('p1').innerHTML = "Back to Black";
+		}
+	
+	function touchHere(element, color){
+			var element = document.getElementById(element);
+			
+			element.style.transition = "width 1s linear 0s, background 1s linear 0s";
+			element.style.background = color;
+		}
+		
+	window.addEventListener('load', function(){
+ 
+    var box1 = document.getElementById('box1')
+    var status = document.getElementById('statusdiv')
+    var start = 0
+    var dist = 0
+ 
+    box1.addEventListener('touchstart', function(e){
+        var touch = e.changedTouches[0] 
+        start = parseInt(touch.clientX) 
+        status.innerHTML = 'Status: touchstart<br> ClientX: ' + start + 'px'
+        e.preventDefault()
+    }, false)
+ 
+    box1.addEventListener('touchmove', function(e){
+        var touch = e.changedTouches[0] 
+        var dist = parseInt(touch.clientX) - start
+        status.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
+        e.preventDefault()
+    }, false)
+ 
+    box1.addEventListener('touchend', function(e){
+        var touch = e.changedTouches[0] 
+        status.innerHTML = 'Status: touchend<br> Resting x coordinate: ' + touch.clientX + 'px'
+        e.preventDefault()
+    }, false)
+ 
+}, false)
+	</script>
+
+</head>
+
+<body onload="setTimeout('load()', 2000)">
+<h1>JavaScript Events</h1>
+<h2>Onload</h2>
+<p>Starts when the page loads. Opens a new window.</p>
+<h2>Onclick</h2>
+<p onclick="clickHere()">Click Here!</p>
+<h2>onMouseOver and onMouseOut</h2>
+<p id='p1' onmouseover="style.color='red', over();" onmouseout="style.color='black', out()">Float over me with the mouse!</p>
+<h2>Ontouch Start</h2>
+<p>Touch the Red Box!</p>
+<div class="box" id="box1">
+</div>
+<h3 id="statusdiv">Status</h3>
+
+
+</body>
+</html>

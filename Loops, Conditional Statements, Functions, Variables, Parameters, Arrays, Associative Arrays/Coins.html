@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Coin Conversion</title>
+<script type="text/javascript">
+
+function Coins() {
+	// Get the coin amount.
+	var Pennies = parseInt(document.getElementById('Pennies').value)
+	var Nickels = parseInt(document.getElementById('Nickels').value)
+	var Dimes = parseInt(document.getElementById('Dimes').value)
+	var Quarters = parseInt(document.getElementById('Quarters').value)
+	
+	// Compute the coin conversion.
+	var Pennies = Pennies * .01;
+	var Nickels = Nickels * .05;
+	var Dimes = Dimes * .10;
+	var Quarters = Quarters * .25;
+	
+	//Display the conversion.
+	document.getElementById('output').innerHTML = "Amount of Pennies $" + Pennies + "<br>" + "Amount of Nickels $" + 
+	Nickels + "<br>" + "Amount of Dimes $" + Dimes + "<br>" + "Amount of Quarters $" + Quarters;
+	 
+	}
+ </script>
+</head>
+
+<body>  
+<h1>Functions and Variables</h1>
+Enter amount of pennies: <input type="text" id="Pennies" size='3'><br> 
+Enter amount of nickels: <input type="text" id="Nickels" size='3'><br>  
+Enter amount of dimes: <input type="text" id="Dimes" size='3'><br>  
+Enter amount of Quarters: <input type="text" id="Quarters" size='3'><br>    
+<button type="button" onclick="Coins()">Coin Conversion</button>
+<div id="output"></div>
+</body>       
+</html>

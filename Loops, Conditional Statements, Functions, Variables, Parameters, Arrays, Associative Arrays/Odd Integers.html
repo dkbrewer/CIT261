@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Odd Integers</title>
+<script type="text/javascript">
+
+function oddSum() {
+	//Get one number from the user.
+	
+	var n = parseInt(document.getElementById("inte").value);
+	
+	//Calculate the sum of the odd integers
+	
+	var odd = 0;
+	for (var i = 1; i <= n; i += 2) {
+		odd = odd + i}
+	
+	// Display result to user.
+	document.getElementById("output").innerHTML = odd;
+	}
+ 
+</script>
+</head>
+
+<body>
+<h1>For Loop</h1>
+Enter a number <input type="text" id="inte"><br>
+    <button type="button" onclick="oddSum()">Sum of Odd Integers</button>
+    <div id="output"></div>
+</body>
+</html>

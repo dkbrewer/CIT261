@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Stringify</title>
+<script type="text/javascript">
+
+	var obj = {
+		apples: [
+			{name: "Fuji", flavor: "Sweet"},
+			{name: "Cameo",flavor: "Less Sweet"},
+			{name: "Honey Crisp", flavor: "Tart"},
+			{name: "Granny Smith", flavor: "Most Tart"},
+        ]
+	};
+	
+	var string = JSON.stringify(obj);
+	console.log(string);
+	var object = JSON.parse(string);
+	console.log(object);
+	
+</script>
+</head>
+
+<body>
+<h1>Parse and Stringify</h1>
+<p>Open the Console to view the result</p>
+</body>
+</html>

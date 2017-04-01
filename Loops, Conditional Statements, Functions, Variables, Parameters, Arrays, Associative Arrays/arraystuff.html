@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript">
+
+function arrays() {
+    var color = ["Blue", "Red", "Yellow", "Orange"];
+    document.getElementById("output1").innerHTML = color;
+}
+
+ function arrayPush() {
+    var color = ["Blue", "Red", "Yellow", "Orange"];
+    color.push("Green");
+    document.getElementById("output2").innerHTML = color;
+}
+
+ function arrayPop() {
+    var color = ["Blue", "Red", "Yellow", "Orange"];
+    color.pop();
+    document.getElementById("output3").innerHTML = color;
+}
+ 
+</script>
+</head>
+
+<body>
+<h1>Arrays</h1>
+<h2>Normal Array</h2>
+<button type="button" onclick="arrays()">Click Here</button>
+<div id="output1"></div>
+<h2>Push</h2>
+<button type="button" onclick="arrayPush()">Click Here</button>
+<div id="output2"></div>
+<h2>Pop</h2>
+<button type="button" onclick="arrayPop()">Click Here</button>
+<div id="output3"></div>
+</body>
+</html>

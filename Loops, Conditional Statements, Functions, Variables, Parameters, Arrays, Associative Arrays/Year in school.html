@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Year In School</title>
+<script type="text/javascript">
+
+ function getYear(){
+	//Get the name and number of credits from the user.
+	var name = document.getElementById("name").value;
+	var credits = document.getElementById("credits").value;
+	
+	//Determine the users year in school
+
+	var year;
+		if ( credits >= 0 && credits <= 30) {
+		year = document.getElementById("output").innerHTML = name + ": Freshman";}
+		else if (credits >= 30 && credits <= 60) {
+		year = document.getElementById("output").innerHTML = name + ": Sophomore";}
+		else if (credits >= 60 && credits <=90) {
+		year = document.getElementById("output").innerHTML = name + ": Junior";}
+		else{
+		year = document.getElementById("output").innerHTML = name + ": Senior";}
+	
+	
+	// Display users name and year in school.
+	document.getElementById("output").innerHTML = name;
+	document.getElementById("output").innerHTML = year;
+	}
+ 
+</script>
+</head>
+
+<body>
+<h1>Conditional Statement</h1>
+Name <input type="text" id="name"><br>
+Number of Credits <input type="text" id="credits" size = 3><br>
+    <button type="button" onclick="getYear()">Determine Year in School</button>
+    <div id="output"></div>
+</body>
+</html>
