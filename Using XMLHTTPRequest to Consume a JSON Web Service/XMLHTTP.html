@@ -2,27 +2,60 @@
 <html>
 <body>
 
-<div id="xmlhttp"></div>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            float: left;
+        }
+
+        a {
+            display: block;
+            padding: 8px;
+            background-color: orange;
+        }
+        
+        li a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+
+<!-- Where the array is displayed -->
+<ul id="xmlhttp">
+</ul>
+
 
 <script>
+    
+<!-- Create a request and bring in the text file -->
 var xmlhttp = new XMLHttpRequest();
-var url = "test.txt";
+var file = "test.txt";
 
+<!-- Set up the response -->
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        getList(myArr);
+        var nav = JSON.parse(this.responseText);
+        getList(nav);
     }
 };
-xmlhttp.open("GET", url, true);
+
+<!-- Specifies the request and sends to the server -->
+xmlhttp.open("GET", file, true);
 xmlhttp.send();
 
+<!-- Goes through the array objects and diplay as links -->
 function getList(arr) {
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' + 
-        arr[i].display + '</a><br>';
+        out += '<li><a href="' + arr[i].url + '">' + arr[i].display + '</a></li>';
     }
     document.getElementById("xmlhttp").innerHTML = out;
 }
